@@ -7,69 +7,305 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://assameduverse.com/" />
 
-  <title>Assam Eduverse | Notes, Study Materials & Exam Support for Assam Students</title>
+  <title>Assam Eduverse | Notes, Study Materials, MCQs & Exam Support</title>
 
-  <meta name="description" content="Assam Eduverse provides chapter-wise notes, previous year questions, exam guides, and easy explanations for students in Assam (SEBA & AHSEC). Study smarter with our resources.">
+  <meta name="description" content="Assam Eduverse provides notes, MCQs, solutions and study materials for Assam Board, SEBA, AHSEC, CBSE, competitive exams like NEET & JEE, and government job preparation." />
+  <meta name="robots" content="index,follow" />
 
-  <!-- Social preview -->
-  <meta property="og:title" content="Assam Eduverse – Study Materials for Students in Assam">
-  <meta property="og:description" content="Access notes, important questions, and exam preparation resources for SEBA and AHSEC students in Assam.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://assameduverse.com/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Assam Eduverse – Study Materials & Exam Preparation" />
+  <meta property="og:description" content="Access solutions, MCQs, notes and exam preparation resources for Assam Board, SEBA, AHSEC, CBSE, NEET, JEE and government job exams." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://assameduverse.com/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Assam Eduverse – Study Materials & Exam Preparation" />
+  <meta name="twitter:description" content="Educational updates and study materials for Assam Board, CBSE, NEET, JEE and government job exams." />
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: #f5f6fa; color: #111; line-height: 1.6; }
-    header {
-      background: linear-gradient(120deg, #1f2937, #111827);
-      color: #fff; text-align: center; padding: 2.2rem 1rem 2.8rem;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
     }
-    header h1 { font-size: 2rem; margin-bottom: 0.4rem; }
-    header p { font-size: 0.97rem; opacity: 0.95; }
+
+    body {
+      background: #f5f6fa;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 23, 42, 0.98);
+      backdrop-filter: blur(10px);
+      color: #e5e7eb;
+      padding: 0.65rem 1rem;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.4);
+    }
+
+    .nav-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 1rem;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-brand span.logo-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #fbbf24;
+      display: inline-block;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      background: rgba(55, 65, 81, 0.8);
+    }
+
+    /* Hero */
+    header.hero {
+      background: linear-gradient(140deg, #111827, #020617);
+      color: #fff;
+      text-align: center;
+      padding: 2.7rem 1rem 3.1rem;
+    }
+
+    header.hero h1 {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    header.hero p {
+      font-size: 0.98rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0.4rem auto 1.1rem;
+    }
+
     .badge {
-      background: rgba(255,255,255,0.18);
-      border: 1px solid rgba(255,255,255,0.25);
-      display: inline-block; padding: 4px 10px;
-      border-radius: 999px; font-size: 0.75rem; margin-bottom: 10px;
+      display: inline-block;
+      background: rgba(148, 163, 184, 0.25);
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.78rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      margin-bottom: 0.6rem;
     }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.4rem;
+    }
+
     .btn {
-      display: inline-block; padding: 0.7rem 1.2rem;
-      border-radius: 30px; font-size: 0.9rem; margin: 0.3rem;
-      text-decoration: none; cursor: pointer;
+      display: inline-block;
+      padding: 0.65rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
     }
-    .btn-main { background: #fbbf24; color: #111; font-weight: bold; }
+
+    .btn-main {
+      background: #fbbf24;
+      color: #111827;
+      font-weight: 600;
+    }
+
     .btn-outline {
-      color: #eee; border: 1px solid #ccc; background: transparent;
+      background: transparent;
+      border-color: rgba(148, 163, 184, 0.7);
+      color: #e5e7eb;
     }
 
-    main { max-width: 950px; margin: -1.2rem auto 2.5rem; padding: 0 1rem; }
+    /* Layout */
+    main {
+      max-width: 1040px;
+      margin: -1.2rem auto 2.7rem;
+      padding: 0 1rem;
+    }
+
     .card {
-      background: #fff; padding: 1.6rem; margin-top: 1.3rem;
-      border-radius: 12px; box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-    }
-    h2 { font-size: 1.35rem; margin-bottom: 0.6rem; }
-    h3 { font-size: 1.05rem; margin: 0.8rem 0 0.4rem; }
-    ul { margin-left: 1.2rem; }
-    li { margin-bottom: 0.4rem; }
-    .highlight {
-      background: #eef2ff; border-left: 4px solid #6366f1;
-      padding: 0.8rem; margin-top: 0.7rem; border-radius: 6px;
-    }
-    .pill {
-      background: #eef0ff; padding: 0.45rem 0.75rem;
-      border-radius: 999px; font-size: 0.82rem;
-      border: 1px solid #d4daff; display: inline-block; margin: 4px;
-    }
-    footer {
-      text-align: center; padding: 1rem 0 2rem;
-      font-size: 0.85rem; color: #666;
+      background: #ffffff;
+      padding: 1.6rem 1.5rem;
+      border-radius: 14px;
+      margin-top: 1.3rem;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.16);
     }
 
-    .faq-item { margin-bottom: 1rem; border-bottom: 1px solid #ddd; padding-bottom: 0.6rem; }
-    .faq-q { font-weight: bold; }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.7rem;
+      color: #111827;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 0.8rem;
+      margin-bottom: 0.4rem;
+      color: #111827;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 0.45rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    li {
+      margin-bottom: 0.3rem;
+    }
+
+    .section-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6b7280;
+      margin-bottom: 0.35rem;
+    }
+
+    .highlight {
+      background: #eef2ff;
+      border-left: 4px solid #6366f1;
+      padding: 0.85rem 0.9rem;
+      border-radius: 8px;
+      margin-top: 0.7rem;
+      font-size: 0.9rem;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: #eef0ff;
+      border: 1px solid #d4daff;
+      font-size: 0.82rem;
+      margin: 3px;
+    }
+
+    .link-list a {
+      display: block;
+      font-size: 0.93rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .link-list small {
+      display: block;
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 0.4rem;
+    }
+
+    .faq-item {
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Social icons list */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.5rem 1rem;
+      font-size: 0.93rem;
+    }
+
+    .social-grid a {
+      font-weight: 500;
+    }
+
+    .social-label {
+      font-size: 0.8rem;
+      color: #6b7280;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2rem 1rem 2.2rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 768px) {
+      header.hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      main {
+        margin-top: -0.6rem;
+      }
+
+      .card {
+        padding: 1.3rem 1.1rem;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
-  <!-- SEO FAQ Schema -->
+  <!-- FAQ Schema for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -80,136 +316,276 @@
         "name": "What is Assam Eduverse?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Assam Eduverse is an online education platform for students in Assam, offering notes, previous year questions, and exam-focused study resources."
+          "text": "Assam Eduverse is an online education platform providing notes, solutions, MCQs and exam guidance for Assam Board, SEBA, AHSEC, CBSE and various competitive exams."
         }
       },
       {
         "@type": "Question",
-        "name": "Is Assam Eduverse free?",
+        "name": "Which exams does Assam Eduverse cover?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Most materials on Assam Eduverse are completely free for students."
+          "text": "Assam Eduverse covers Assam Board (SEBA and AHSEC), CBSE school students, and also supports preparation for competitive exams like NEET, JEE and government job exams."
         }
       },
       {
         "@type": "Question",
-        "name": "Who can use Assam Eduverse?",
+        "name": "Is Assam Eduverse free to use?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "It is designed for SEBA and AHSEC students, but any learner needing clear explanations can use it."
+          "text": "Many of the notes, solutions and study materials on Assam Eduverse are free for students. Additional resources may be added over time based on demand."
         }
       }
     ]
   }
   </script>
-
 </head>
 <body>
 
-<header>
-    <div class="badge">Assam · Education · Notes</div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <span class="logo-dot"></span> ASSAM EDUVERSE
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#resources">Resources</a>
+        <a href="#boards">Boards</a>
+        <a href="#competitive">Competitive</a>
+        <a href="#social">Social</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="badge">Educational Updates · Study Materials · Exam Preparation</div>
     <h1>Assam Eduverse – Helping Students Learn Better</h1>
-    <p>Created by <strong>Jamal Ali</strong> · Notes, PYQs, explanations & exam-focused support for Assam students.</p>
-
-    <div>
-      <a class="btn btn-main" href="https://assameduverse.com/" target="_blank">🔗 Visit Main Website</a>
-      <a class="btn btn-outline" href="#resources">📚 View Study Resources</a>
-    </div>
-</header>
-
-<main>
-
-  <section class="card">
-    <h2>About Assam Eduverse</h2>
     <p>
-      <strong>Assam Eduverse</strong> is a learning platform that provides
-      easy-to-understand notes, important questions, and exam preparation materials
-      for SEBA and AHSEC students.
+      Educational updates, notes, MCQs and solutions for Assam Board, SEBA, AHSEC, CBSE, NEET, JEE and government job exams.
+      Curated and managed by <strong>Jamal Ali</strong>.
     </p>
-
-    <div class="highlight">
-      ⭐ Official Website:  
-      <a href="https://assameduverse.com/" target="_blank">https://assameduverse.com/</a>
+    <div class="hero-actions">
+      <a class="btn btn-main" href="https://assameduverse.com/" target="_blank" rel="noopener">
+        🔗 Visit Main Website
+      </a>
+      <a class="btn btn-outline" href="#resources">
+        📚 Explore Key Study Resources
+      </a>
     </div>
-  </section>
+  </header>
 
-  <section id="resources" class="card">
-    <h2>Study Resources We Provide</h2>
-    <ul>
-      <li>📘 Class 9 & 10 (SEBA) Notes</li>
-      <li>📙 Class 11 & 12 (AHSEC) Notes</li>
-      <li>📄 Previous Year Question Solutions</li>
-      <li>✏️ Chapter Summaries & Explanations</li>
-      <li>📚 Exam-focused important questions</li>
-    </ul>
+  <main>
+    <!-- About -->
+    <section id="about" class="card">
+      <div class="section-tag">About Assam Eduverse</div>
+      <h2>What is Assam Eduverse?</h2>
+      <p>
+        <strong>Assam Eduverse</strong> is a dedicated learning platform focused on students from Assam and beyond.
+        The mission is to provide <em>clear notes, solutions, MCQs, and exam-focused guidance</em> that make studying
+        easier for school students and competitive exam aspirants.
+      </p>
+      <p>
+        The main website hosts detailed content for Assam Board (SEBA & AHSEC), CBSE, and competitive exams like NEET,
+        JEE and various government job examinations.
+      </p>
 
-    <h3>Popular Categories</h3>
-    <div>
-      <span class="pill">SEBA Notes</span>
-      <span class="pill">AHSEC Notes</span>
-      <span class="pill">English Notes</span>
-      <span class="pill">Assamese Notes</span>
-      <span class="pill">PYQs</span>
-      <span class="pill">Exam Tips</span>
-    </div>
+      <div class="highlight">
+        ⭐ For full notes, solutions and updates, always visit the official site:<br />
+        <a href="https://assameduverse.com/" target="_blank" rel="noopener">https://assameduverse.com/</a>
+      </div>
+    </section>
 
-    <div class="highlight">
-      📌 Full study materials are available on our main website.<br>
-      👉 <a href="https://assameduverse.com/" target="_blank">Visit Assam Eduverse</a>
-    </div>
-  </section>
+    <!-- Resources & Main Links -->
+    <section id="resources" class="card">
+      <div class="section-tag">Study Materials</div>
+      <h2>Important Study Resources on Assam Eduverse</h2>
+      <p>Here are some of the key sections of the main website that students use the most:</p>
 
-  <section class="card">
-    <h2>About Jamal Ali</h2>
-    <p>
-      I’m <strong>Jamal Ali</strong>, creator of this page and contributor to Assam Eduverse.
-      My goal is to help students learn confidently with simple notes and practical exam guidance.
-    </p>
+      <div class="link-list">
+        <a href="https://assameduverse.com/asseb-solutions/" target="_blank" rel="noopener">
+          ⚙️ SEBA Solutions (Assam Board)
+        </a>
+        <small>Solutions and explanations for SEBA students of Classes 9 and 10.</small>
 
-    <p>This GitHub website gives extra visibility and SEO support to Assam Eduverse.</p>
+        <a href="https://assameduverse.com/seba-solutions-for-class-9-and-10/" target="_blank" rel="noopener">
+          📘 SEBA Solutions for Class 9 & 10
+        </a>
+        <small>Class-wise solutions, chapter notes and exam-focused questions.</small>
 
-    <ul>
-      <li>🔗 GitHub Profile: <a href="https://github.com/jamalali078" target="_blank">github.com/jamalali078</a></li>
-      <li>📁 Repository: <a href="https://github.com/jamalali078/jamalali" target="_blank">jamalali</a></li>
-    </ul>
-  </section>
+        <a href="https://assameduverse.com/ahsec-solutions-for-class-11-and-12/" target="_blank" rel="noopener">
+          📙 AHSEC Solutions for Class 11 & 12
+        </a>
+        <small>Support for senior secondary students preparing for AHSEC exams.</small>
 
-  <section class="card">
-    <h2>FAQ – Assam Eduverse</h2>
+        <a href="https://assameduverse.com/assam-board-mcqs/" target="_blank" rel="noopener">
+          ❓ Assam Board MCQs
+        </a>
+        <small>Topic-wise and chapter-wise MCQs for quick practice and revision.</small>
 
-    <div class="faq-item">
-      <div class="faq-q">What is Assam Eduverse?</div>
-      <p>It’s a study platform for Assam students offering notes and exam prep support.</p>
-    </div>
+        <a href="https://assameduverse.com/assam-study-materials/" target="_blank" rel="noopener">
+          📚 Assam Study Materials
+        </a>
+        <small>Collections of notes, summaries and practice questions for different subjects.</small>
 
-    <div class="faq-item">
-      <div class="faq-q">Is it free?</div>
-      <p>Yes, all main notes are free.</p>
-    </div>
+        <a href="https://assameduverse.com/assam-english-medium-solutions/" target="_blank" rel="noopener">
+          📝 English Medium Solutions
+        </a>
+        <small>Solutions designed for English medium students in Assam.</small>
 
-    <div class="faq-item">
-      <div class="faq-q">Who is it for?</div>
-      <p>SEBA & AHSEC students mainly, but anyone can use it.</p>
-    </div>
+        <a href="https://assameduverse.com/assam-assamese-medium-solutions/" target="_blank" rel="noopener">
+          📝 Assamese Medium Solutions
+        </a>
+        <small>Solutions and explanations for Assamese medium students.</small>
+      </div>
 
-  </section>
+      <h3>What You Can Expect</h3>
+      <div>
+        <span class="pill">Chapter-wise notes</span>
+        <span class="pill">Solved examples</span>
+        <span class="pill">Previous year questions</span>
+        <span class="pill">MCQs & practice sets</span>
+        <span class="pill">Revision summaries</span>
+        <span class="pill">Exam strategy tips</span>
+      </div>
+    </section>
 
-  <section class="card">
-    <h2>Contact</h2>
-    <p>For suggestions or feedback:</p>
-    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a>  
-    (replace with your real email if you want)</p>
-  </section>
+    <!-- Boards -->
+    <section id="boards" class="card">
+      <div class="section-tag">School Boards</div>
+      <h2>Support for Assam Board & CBSE Students</h2>
+      <p>
+        Assam Eduverse focuses strongly on <strong>Assam Board</strong> students (SEBA & AHSEC), while also supporting
+        <strong>CBSE</strong> learners with clear and structured explanations.
+      </p>
+      <ul>
+        <li>SEBA – Class 9 and 10 solutions, notes and MCQs.</li>
+        <li>AHSEC – Class 11 and 12 notes, solutions and practice questions.</li>
+        <li>CBSE – Concept explanations and notes to strengthen fundamentals.</li>
+      </ul>
+      <div class="highlight">
+        ✅ Students can use Assam Eduverse to build strong basics and then revise important questions before exams.
+      </div>
+    </section>
 
-</main>
+    <!-- Competitive Exams -->
+    <section id="competitive" class="card">
+      <div class="section-tag">Competitive Exams</div>
+      <h2>NEET, JEE & Government Job Preparation</h2>
+      <p>
+        Apart from school exams, Assam Eduverse also aims to support aspirants preparing for competitive examinations.
+      </p>
+      <ul>
+        <li>NEET & JEE – Focus on concepts, practice questions and revision.</li>
+        <li>Government job exams – Foundation support for subjects like reasoning, maths and general knowledge (as content expands).</li>
+        <li>Exam updates and preparation tips shared through educational updates.</li>
+      </ul>
+      <p style="font-size: 0.9rem;">
+        (New competitive exam content may be added gradually based on student demand and time.)
+      </p>
+    </section>
 
-<footer>
-  © <span id="year"></span> Assam Eduverse · Built by Jamal Ali · Powered by GitHub Pages
-</footer>
+    <!-- Social Links -->
+    <section id="social" class="card">
+      <div class="section-tag">Community & Social</div>
+      <h2>Stay Connected with Assam Eduverse</h2>
+      <p>
+        Follow Assam Eduverse on different platforms for educational updates, new uploads, and study tips.
+      </p>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+      <div class="social-grid">
+        <div>
+          <span class="social-label">Facebook</span>
+          <a href="https://www.facebook.com/profile.php?id=61582858412012" target="_blank" rel="noopener">
+            fb.com/assameduverse
+          </a>
+        </div>
+        <div>
+          <span class="social-label">Instagram</span>
+          <a href="https://www.instagram.com/assameduverse" target="_blank" rel="noopener">
+            @assameduverse
+          </a>
+        </div>
+        <div>
+          <span class="social-label">X (Twitter)</span>
+          <a href="https://x.com/assameduverse" target="_blank" rel="noopener">
+            x.com/assameduverse
+          </a>
+        </div>
+        <div>
+          <span class="social-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/company/assam-eduverse/" target="_blank" rel="noopener">
+            Assam Eduverse on LinkedIn
+          </a>
+        </div>
+        <div>
+          <span class="social-label">Quora Space</span>
+          <a href="https://assameduverseeducationupdates.quora.com" target="_blank" rel="noopener">
+            Assam Eduverse Education Updates
+          </a>
+        </div>
+        <div>
+          <span class="social-label">GitHub</span>
+          <a href="https://github.com/assameduverse" target="_blank" rel="noopener">
+            github.com/assameduverse
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- FAQ -->
+    <section class="card">
+      <div class="section-tag">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Is Assam Eduverse an official board website?</div>
+        <p>
+          No. Assam Eduverse is an independent educational initiative and is not an official website of SEBA, AHSEC or CBSE.
+          It is created to support students with notes, solutions and guidance.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Do I need to pay to use Assam Eduverse?</div>
+        <p>
+          Many resources such as notes and solutions are free to access. If any paid features are added later, they will
+          be clearly mentioned on the main website.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I rely only on Assam Eduverse for exams?</div>
+        <p>
+          Assam Eduverse should be used as a supporting resource. Students are encouraged to use their official textbooks,
+          teachers' guidance and previous year question papers along with these notes and solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <div class="section-tag">Contact</div>
+      <h2>Contact Assam Eduverse</h2>
+      <p>
+        For suggestions, doubt clarification requests, feedback or collaboration ideas, you can reach out via email.
+      </p>
+      <p>
+        📧 Email: <a href="mailto:assameduverse@gmail.com">assameduverse@gmail.com</a>
+      </p>
+      <p style="font-size: 0.88rem; color: #4b5563;">
+        Please include your class, board and subject when you write, so that it is easier to understand your query.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Assam Eduverse · Created by Jamal Ali · Hosted on GitHub Pages
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
